@@ -1,0 +1,160 @@
+
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aparecer-suave {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entrar-izquierda {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translate(-50%, -100%) rotate(-45deg);
+  }
+  50% {
+    transform: translate(-50%, -118%) rotate(-45deg);
+  }
+}
+
+@keyframes latido {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.18);
+  }
+}
+
+@keyframes brillo {
+  from {
+    background-position: -160% 0;
+  }
+  to {
+    background-position: 260% 0;
+  }
+}
+
+@keyframes zoom-lento {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes mecer {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+.rejilla-tarjetas .tarjeta {
+  animation: aparecer-suave 620ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.rejilla-tarjetas .tarjeta:nth-child(2) { animation-delay: 90ms; }
+.rejilla-tarjetas .tarjeta:nth-child(3) { animation-delay: 180ms; }
+.rejilla-tarjetas .tarjeta:nth-child(4) { animation-delay: 270ms; }
+.rejilla-tarjetas .tarjeta:nth-child(5) { animation-delay: 360ms; }
+.rejilla-tarjetas .tarjeta:nth-child(6) { animation-delay: 450ms; }
+.rejilla-tarjetas .tarjeta:nth-child(n + 7) { animation-delay: 540ms; }
+
+#f-hogar:checked    ~ .rejilla-catalogo .tarjeta,
+#f-cuidado:checked  ~ .rejilla-catalogo .tarjeta,
+#f-alimentos:checked ~ .rejilla-catalogo .tarjeta,
+#p-1:checked        ~ .rejilla-catalogo .tarjeta,
+#p-2:checked        ~ .rejilla-catalogo .tarjeta {
+  animation: aparecer 340ms ease-out both;
+}
+
+.tarjeta__favorito:hover .icono,
+.tarjeta__favorito:focus-visible .icono {
+  animation: latido 700ms ease-in-out infinite;
+}
+
+.portada__imagen {
+  animation: zoom-lento 1400ms ease-out both;
+}
+
+.boton--primario {
+  background-image: linear-gradient(
+    100deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.28) 42%,
+    transparent 62%
+  );
+  background-repeat: no-repeat;
+  background-size: 220% 100%;
+  background-position: -160% 0;
+}
+
+.boton--primario:hover {
+  animation: brillo 900ms ease-out;
+}
+
+.logo .icono {
+  transform-origin: 50% 90%;
+  animation: mecer 5s ease-in-out infinite;
+}
+
+.portada__contenido > * {
+  animation: entrar-izquierda 780ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.portada__contenido > *:nth-child(2) { animation-delay: 120ms; }
+.portada__contenido > *:nth-child(3) { animation-delay: 240ms; }
+.portada__contenido > *:nth-child(4) { animation-delay: 360ms; }
+
+.hito:hover .hito__anio {
+  animation: aparecer 300ms ease-out;
+}
+
+.beneficio:hover .icono {
+  transform: translateY(-4px) scale(1.08);
+  transition: transform var(--transicion);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rejilla-tarjetas .tarjeta,
+  .portada__imagen,
+  .portada__contenido > *,
+  .boton--primario:hover,
+  .logo .icono,
+  .mapa__marcador,
+  .tarjeta__favorito:hover .icono {
+    animation: none;
+  }
+}

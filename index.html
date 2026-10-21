@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoMarket — Tienda en línea de productos ecológicos, reutilizables y sostenibles. Compra responsable, vive sostenible.">
+  <meta name="author" content="EcoMarket">
+  <title>EcoMarket | Productos ecológicos y sostenibles</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="control" aria-hidden="true">
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+      <a href="index.html" class="logo" aria-label="EcoMarket, ir al inicio">
+        <span class="icono icono--hoja" aria-hidden="true"></span>
+        EcoMarket
+      </a>
+
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="index.html" class="navegacion__enlace navegacion__enlace--activo">Inicio</a>
+        <a href="views/productos.html" class="navegacion__enlace">Productos</a>
+        <a href="views/sobre-nosotros.html" class="navegacion__enlace">Nosotros</a>
+        <a href="views/contacto.html" class="navegacion__enlace">Contacto</a>
+      </nav>
+
+      <div class="cabecera__acciones">
+        <a href="views/productos.html" class="cabecera__accion" aria-label="Buscar productos">
+          <span class="icono icono--lupa" aria-hidden="true"></span>
+        </a>
+        <a href="views/contacto.html" class="cabecera__accion" aria-label="Mi cuenta">
+          <span class="icono icono--usuario" aria-hidden="true"></span>
+        </a>
+        <a href="views/productos.html" class="cabecera__accion" aria-label="Carrito de compras, 3 productos">
+          <span class="icono icono--carrito" aria-hidden="true"></span>
+          <span class="cabecera__contador">3</span>
+        </a>
+      </div>
+
+      <label for="menu-toggle" class="cabecera__menu-boton" aria-label="Abrir o cerrar el menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="portada">
+      <img src="img/hero/hero.jpg" alt="Puesto de mercado con frutas y verduras frescas" class="portada__imagen">
+      <div class="contenedor portada__contenido">
+        <p class="seccion__etiqueta">
+          <span class="icono icono--reciclaje" aria-hidden="true"></span>
+          Tienda 100% sostenible
+        </p>
+        <h1 class="portada__titulo">Compra responsable,<br><em>vive sostenible</em></h1>
+        <p class="portada__texto">
+          Productos ecológicos, reutilizables y de comercio justo seleccionados
+          uno a uno. Menos plástico, menos huella y mejor calidad para tu casa.
+        </p>
+        <div class="portada__acciones">
+          <a href="views/productos.html" class="boton boton--primario">
+            <span class="icono icono--carrito" aria-hidden="true"></span>
+            Explorar productos
+          </a>
+          <a href="#historia" class="boton boton--claro">Ver más</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="beneficios-titulo">
+      <div class="contenedor">
+        <h2 id="beneficios-titulo" class="oculto-visualmente">Beneficios de comprar en EcoMarket</h2>
+        <div class="beneficios">
+          <article class="beneficio">
+            <span class="icono icono--envio" aria-hidden="true"></span>
+            <h3 class="beneficio__titulo">Envío en 24 horas</h3>
+            <p class="beneficio__texto">Entrega neutra en carbono en toda la ciudad.</p>
+          </article>
+          <article class="beneficio">
+            <span class="icono icono--hoja" aria-hidden="true"></span>
+            <h3 class="beneficio__titulo">Certificación orgánica</h3>
+            <p class="beneficio__texto">Cada producto trae su sello de origen verificado.</p>
+          </article>
+          <article class="beneficio">
+            <span class="icono icono--reciclaje" aria-hidden="true"></span>
+            <h3 class="beneficio__titulo">Cero plástico</h3>
+            <p class="beneficio__texto">Empaques compostables y caja devuelta para reusar.</p>
+          </article>
+          <article class="beneficio">
+            <span class="icono icono--corazon" aria-hidden="true"></span>
+            <h3 class="beneficio__titulo">Comercio justo</h3>
+            <p class="beneficio__texto">Trabajamos directo con productores locales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion fondo-beige" aria-labelledby="destacados-titulo">
+      <div class="contenedor">
+        <header class="seccion__encabezado">
+          <p class="seccion__etiqueta"><span class="icono icono--estrella" aria-hidden="true"></span> Los más pedidos</p>
+          <h2 id="destacados-titulo" class="seccion__titulo">Productos destacados</h2>
+          <p class="seccion__descripcion">
+            Seis favoritos de la semana: reutilizables, a granel y sin empaques de un solo uso.
+          </p>
+        </header>
+
+        <div class="rejilla-tarjetas rejilla-tarjetas--tres">
+          <article class="tarjeta">
+            <div class="tarjeta__figura">
+              <img src="img/products/jabon-karite.jpg" alt="Jabón artesanal de karité sobre hojas verdes" class="tarjeta__imagen">
+              <span class="tarjeta__insignia">Nuevo</span>
+              <button class="tarjeta__favorito" aria-label="Guardar jabón de karité en favoritos">
+                <span class="icono icono--corazon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="tarjeta__categoria">Cuidado personal</p>
+              <h3 class="tarjeta__nombre">Jabón artesanal de karité</h3>
+              <p class="tarjeta__resena">Barra de 120 g hecha en frío, sin sulfatos ni perfume sintético.</p>
+              <p class="valoracion">
+                <span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span>
+                5.0 · 42 reseñas
+              </p>
+              <div class="tarjeta__pie">
+                <p class="precio">$ 12.000<span class="precio__anterior">$ 15.900</span></p>
+                <button class="boton-agregar">
+                  <span class="icono icono--carrito" aria-hidden="true"></span>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__figura">
+              <img src="img/products/cepillos-bambu.jpg" alt="Cepillos de dientes de bambú sobre fondo oscuro" class="tarjeta__imagen">
+              <span class="tarjeta__insignia tarjeta__insignia--arena">Reutilizable</span>
+              <button class="tarjeta__favorito" aria-label="Guardar cepillos de bambú en favoritos">
+                <span class="icono icono--corazon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="tarjeta__categoria">Cuidado personal</p>
+              <h3 class="tarjeta__nombre">Pack 4 cepillos de bambú</h3>
+              <p class="tarjeta__resena">Mango compostable y cerdas de carbón activado. Caja de cartón sin plástico.</p>
+              <p class="valoracion">
+                <span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span>
+                4.9 · 128 reseñas
+              </p>
+              <div class="tarjeta__pie">
+                <p class="precio">$ 18.900</p>
+                <button class="boton-agregar">
+                  <span class="icono icono--carrito" aria-hidden="true"></span>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__figura">
+              <img src="img/products/palta-organica.jpg" alt="Mitad de palta orgánica sobre pan y vegetales" class="tarjeta__imagen">
+              <span class="tarjeta__insignia">Orgánico</span>
+              <button class="tarjeta__favorito" aria-label="Guardar palta orgánica en favoritos">
+                <span class="icono icono--corazon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="tarjeta__categoria">Alimentos</p>
+              <h3 class="tarjeta__nombre">Palta orgánica Hass</h3>
+              <p class="tarjeta__resena">Cosechada en el altiplano, cultivada sin agroquímicos. Kilogramo a granel.</p>
+              <p class="valoracion">
+                <span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span>
+                4.8 · 76 reseñas
+              </p>
+              <div class="tarjeta__pie">
+                <p class="precio">$ 8.500</p>
+                <button class="boton-agregar">
+                  <span class="icono icono--carrito" aria-hidden="true"></span>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__figura">
+              <img src="img/products/vela-soja.jpg" alt="Vela de soja en frasco de vidrio sobre mesa de madera" class="tarjeta__imagen">
+              <span class="tarjeta__insignia tarjeta__insignia--arena">Frasco reutilizable</span>
+              <button class="tarjeta__favorito" aria-label="Guardar vela de soja en favoritos">
+                <span class="icono icono--corazon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="tarjeta__categoria">Hogar</p>
+              <h3 class="tarjeta__nombre">Vela de soja aromática</h3>
+              <p class="tarjeta__resena">Cera vegetal, mecha de algodón y 35 horas de encendido limpio.</p>
+              <p class="valoracion">
+                <span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span>
+                4.7 · 53 reseñas
+              </p>
+              <div class="tarjeta__pie">
+                <p class="precio">$ 21.000</p>
+                <button class="boton-agregar">
+                  <span class="icono icono--carrito" aria-hidden="true"></span>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__figura">
+              <img src="img/products/cafe-grano.jpg" alt="Granos de café esparcidos sobre fondo claro" class="tarjeta__imagen">
+              <span class="tarjeta__insignia">Comercio justo</span>
+              <button class="tarjeta__favorito" aria-label="Guardar café en grano en favoritos">
+                <span class="icono icono--corazon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="tarjeta__categoria">Alimentos</p>
+              <h3 class="tarjeta__nombre">Café en grano de origen</h3>
+              <p class="tarjeta__resena">Tueste medio de una vereda del Huila. Bolsa de papel con válvula compostable.</p>
+              <p class="valoracion">
+                <span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span>
+                5.0 · 210 reseñas
+              </p>
+              <div class="tarjeta__pie">
+                <p class="precio">$ 24.000<span class="precio__anterior">$ 27.500</span></p>
+                <button class="boton-agregar">
+                  <span class="icono icono--carrito" aria-hidden="true"></span>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__figura">
+              <img src="img/products/suculenta.jpg" alt="Suculenta en maceta negra sostenida en la mano" class="tarjeta__imagen">
+              <span class="tarjeta__insignia tarjeta__insignia--arena">Maceta reciclada</span>
+              <button class="tarjeta__favorito" aria-label="Guardar suculenta en favoritos">
+                <span class="icono icono--corazon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="tarjeta__cuerpo">
+              <p class="tarjeta__categoria">Hogar</p>
+              <h3 class="tarjeta__nombre">Suculenta en maceta reciclada</h3>
+              <p class="tarjeta__resena">Planta viva en maceta de cerámica hecha con material recuperado.</p>
+              <p class="valoracion">
+                <span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span>
+                4.9 · 31 reseñas
+              </p>
+              <div class="tarjeta__pie">
+                <p class="precio">$ 17.500</p>
+                <button class="boton-agregar">
+                  <span class="icono icono--carrito" aria-hidden="true"></span>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <a href="views/productos.html" class="ver-todo">Ver todo el catálogo</a>
+      </div>
+    </section>
+
+    <section class="seccion" id="historia" aria-labelledby="historia-titulo">
+      <div class="contenedor rejilla-dos">
+        <figure class="imagen-marco">
+          <img src="img/hero/historia-marca.jpg" alt="Hoja de planta iluminada por el sol">
+        </figure>
+        <div>
+          <p class="seccion__etiqueta"><span class="icono icono--hoja" aria-hidden="true"></span> Desde 2021</p>
+          <h2 id="historia-titulo" class="seccion__titulo">Nuestra historia</h2>
+          <p class="seccion__descripcion">
+            Empezamos con una caja de verduras de un solo productor y la pregunta
+            de por qué era tan difícil comprar sin generar basura. Hoy trabajamos con
+            24 familias cultivadoras y repartimos en bicicleta, porque una tienda
+            sostenible también tiene que moverse de forma sostenible.
+          </p>
+          <a href="views/sobre-nosotros.html" class="ver-todo">Conocer el proceso completo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion fondo-hielo" aria-labelledby="testimonios-titulo">
+      <div class="contenedor">
+        <header class="seccion__encabezado texto-centrado">
+          <p class="seccion__etiqueta" style="justify-content:center">
+            <span class="icono icono--estrella" aria-hidden="true"></span> Clientes
+          </p>
+          <h2 id="testimonios-titulo" class="seccion__titulo">Lo que dicen quienes ya compran</h2>
+        </header>
+
+        <div class="carrusel">
+          <input type="radio" name="testimonio" id="t-1" class="control" checked aria-label="Testimonio 1">
+          <input type="radio" name="testimonio" id="t-2" class="control" aria-label="Testimonio 2">
+          <input type="radio" name="testimonio" id="t-3" class="control" aria-label="Testimonio 3">
+
+          <div class="carrusel__pista">
+            <blockquote class="testimonio">
+              <span class="testimonio__estrellas" aria-label="Cinco de cinco estrellas">
+                <span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span>
+              </span>
+              <p class="testimonio__texto">“Pedí los cepillos de bambú y la caja llegó sin una sola bolsa plástica. Llevamos tres meses y no volvimos a generar ese basura.”</p>
+              <footer>
+                <cite class="testimonio__autor">Camila Restrepo</cite>
+                <p class="testimonio__cargo">Cliente desde 2023 · Medellín</p>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonio">
+              <span class="testimonio__estrellas" aria-label="Cinco de cinco estrellas">
+                <span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span>
+              </span>
+              <p class="testimonio__texto">“El café en grano es el mejor que he preparado en casa. Se nota que detrás hay un productor pagado con justicia.”</p>
+              <footer>
+                <cite class="testimonio__autor">Andrés Villamizar</cite>
+                <p class="testimonio__cargo">Cliente desde 2022 · Bucaramanga</p>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonio">
+              <span class="testimonio__estrellas" aria-label="Cuatro de cinco estrellas">
+                <span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span>
+              </span>
+              <p class="testimonio__texto">“Compro la canasta de verduras cada quince días. El repartidor siempre deja la caja anterior para reutilizarla.”</p>
+              <footer>
+                <cite class="testimonio__autor">Laura Pinzón</cite>
+                <p class="testimonio__cargo">Cliente desde 2024 · Bogotá</p>
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="carrusel__botones">
+            <label for="t-1" class="punto" aria-label="Ir al testimonio 1"></label>
+            <label for="t-2" class="punto" aria-label="Ir al testimonio 2"></label>
+            <label for="t-3" class="punto" aria-label="Ir al testimonio 3"></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="cta-titulo">
+      <div class="contenedor">
+        <div class="cta">
+          <div>
+            <h2 id="cta-titulo" class="cta__titulo">Empieza por cambiar una cosa esta semana</h2>
+            <p class="cta__texto">Escoge un producto de un solo uso que ya no necesitas comprar. Nosotros te llevamos el reemplazo.</p>
+          </div>
+          <a href="views/productos.html" class="boton boton--claro">Ver catálogo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <section class="pie__marca">
+          <a href="index.html" class="logo">
+            <span class="icono icono--hoja" aria-hidden="true"></span>
+            EcoMarket
+          </a>
+          <p class="pie__texto">
+            Tienda en línea de productos ecológicos, reutilizables y sostenibles.
+            Compra responsable, vida sostenible.
+          </p>
+        </section>
+
+        <nav aria-labelledby="pie-nav">
+          <h3 id="pie-nav" class="pie__titulo">Navegación</h3>
+          <ul class="pie__lista">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="views/productos.html">Catálogo</a></li>
+            <li><a href="views/sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="views/contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pie-cat">
+          <h3 id="pie-cat" class="pie__titulo">Categorías</h3>
+          <ul class="pie__lista">
+            <li><a href="views/productos.html">Hogar</a></li>
+            <li><a href="views/productos.html">Cuidado personal</a></li>
+            <li><a href="views/productos.html">Alimentos</a></li>
+            <li><a href="views/productos.html">Ofertas</a></li>
+          </ul>
+        </nav>
+
+        <section aria-labelledby="pie-con">
+          <h3 id="pie-con" class="pie__titulo">Contacto</h3>
+          <ul class="pie__contacto">
+            <li><span class="icono icono--ubicacion" aria-hidden="true"></span> Calle 42 #15-08, Bogotá</li>
+            <li><span class="icono icono--telefono" aria-hidden="true"></span> +57 601 456 7890</li>
+            <li><span class="icono icono--correo" aria-hidden="true"></span> hola@ecomarket.co</li>
+            <li><span class="icono icono--reloj" aria-hidden="true"></span> Lunes a sábado, 8:00 – 18:00</li>
+          </ul>
+        </section>
+      </div>
+
+      <p class="pie__legal">© 2026 EcoMarket · Proyecto Frontend I · Imágenes de Burst (Shopify), uso libre.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

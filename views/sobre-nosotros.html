@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sobre EcoMarket: nuestra historia, la misión sostenible y los valores que guían cada compra.">
+  <title>Sobre nosotros | EcoMarket</title>
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="control" aria-hidden="true">
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+      <a href="../index.html" class="logo" aria-label="EcoMarket, ir al inicio">
+        <span class="icono icono--hoja" aria-hidden="true"></span>
+        EcoMarket
+      </a>
+
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="../index.html" class="navegacion__enlace">Inicio</a>
+        <a href="productos.html" class="navegacion__enlace">Productos</a>
+        <a href="sobre-nosotros.html" class="navegacion__enlace navegacion__enlace--activo">Nosotros</a>
+        <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+      </nav>
+
+      <div class="cabecera__acciones">
+        <a href="productos.html" class="cabecera__accion" aria-label="Buscar productos">
+          <span class="icono icono--lupa" aria-hidden="true"></span>
+        </a>
+        <a href="contacto.html" class="cabecera__accion" aria-label="Mi cuenta">
+          <span class="icono icono--usuario" aria-hidden="true"></span>
+        </a>
+        <a href="productos.html" class="cabecera__accion" aria-label="Carrito de compras, 3 productos">
+          <span class="icono icono--carrito" aria-hidden="true"></span>
+          <span class="cabecera__contador">3</span>
+        </a>
+      </div>
+
+      <label for="menu-toggle" class="cabecera__menu-boton" aria-label="Abrir o cerrar el menú">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="cabecera-pagina">
+      <div class="contenedor">
+        <ol class="migas">
+          <li><a href="../index.html">Inicio</a></li>
+          <li aria-current="page">Sobre nosotros</li>
+        </ol>
+        <h1 class="seccion__titulo">Sobre nosotros</h1>
+        <p class="seccion__descripcion">
+          Quiénes somos, cómo llegamos aquí y qué queremos cambiar con cada pedido.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="brand-titulo">
+      <div class="contenedor rejilla-dos">
+        <div>
+          <p class="seccion__etiqueta"><span class="icono icono--hoja" aria-hidden="true"></span> Nuestra historia</p>
+          <h2 id="brand-titulo" class="seccion__titulo">Empezamos con una caja y una pregunta</h2>
+          <p class="seccion__descripcion">
+            En 2021 repartíamos verduras de un solo productor en el maletero de un carro.
+            La gente nos preguntaba lo mismo cada semana: por qué el tomate venía en bandeja
+            de icopor y el arroz en bolsa plástica si nadie lo necesitaba.
+          </p>
+          <p class="seccion__descripcion">
+            EcoMarket es la respuesta a esa pregunta. Un catálogo donde cada producto existe
+            para reemplazar algo de un solo uso, con productores que conocemos por nombre y
+            un empaque que vuelve a nosotros para servir otra vez.
+          </p>
+          <a href="productos.html" class="ver-todo">Ver el catálogo</a>
+        </div>
+        <figure class="imagen-marco">
+          <img src="../img/hero/historia-marca.jpg" alt="Hoja verde iluminada por el sol a contraluz">
+        </figure>
+      </div>
+    </section>
+
+    <section class="seccion fondo-hielo" aria-labelledby="mision-titulo">
+      <div class="contenedor rejilla-dos">
+        <figure class="imagen-marco">
+          <img src="../img/hero/mision.jpg" alt="Hojas de planta dentro de una casa, recibiendo luz natural">
+        </figure>
+        <div>
+          <p class="seccion__etiqueta"><span class="icono icono--reciclaje" aria-hidden="true"></span> Misión</p>
+          <h2 id="mision-titulo" class="seccion__titulo">Que lo sostenible deje de ser un lujo</h2>
+          <p class="seccion__descripcion">
+            Nuestro objetivo es que una familia pueda reemplazar todo su carrito de compras
+            sin generar basura innecesaria y sin pagar el doble por hacerlo. Por eso trabajamos
+            a granel, cerramos el ciclo del empaque y publicamos cuánto le pagamos a cada productor.
+          </p>
+          <p class="seccion__descripcion">
+            En 2025 dejamos de enviar 6,4 toneladas de plástico a rellenos sanitarios.
+            La meta de 2026 es el doble.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="timeline-titulo">
+      <div class="contenedor">
+        <header class="seccion__encabezado">
+          <p class="seccion__etiqueta"><span class="icono icono--reloj" aria-hidden="true"></span> Recorrido</p>
+          <h2 id="timeline-titulo" class="seccion__titulo">Cómo llegamos hasta aquí</h2>
+        </header>
+
+        <ol class="linea-tiempo">
+          <li class="hito">
+            <span class="hito__anio">2021</span>
+            <h3 class="hito__titulo">La primera caja</h3>
+            <p class="hito__texto">Tres familias cultivadoras del altiplano y un grupo de 40 vecinos que recibían verduras cada quince días.</p>
+          </li>
+          <li class="hito">
+            <span class="hito__anio">2022</span>
+            <h3 class="hito__titulo">Nace el catálogo reutilizable</h3>
+            <p class="hito__texto">Sumamos hogar y cuidado personal. Introdujimos el sistema de caja devuelta: el empaque siempre vuelve.</p>
+          </li>
+          <li class="hito">
+            <span class="hito__anio">2023</span>
+            <h3 class="hito__titulo">Reparto en bicicleta</h3>
+            <p class="hito__texto">Retiramos las vans de la ciudad y pasamos a mensajería en bicicleta eléctrica. Cero emisiones en la última milla.</p>
+          </li>
+          <li class="hito">
+            <span class="hito__anio">2024</span>
+            <h3 class="hito__titulo">Precios de origen publicados</h3>
+            <p class="hito__texto">Empezamos a mostrar cuánto recibe cada productor por pedido. Transparencia como parte del producto.</p>
+          </li>
+          <li class="hito">
+            <span class="hito__anio">2025</span>
+            <h3 class="hito__titulo">24 productores y 6,4 toneladas menos de plástico</h3>
+            <p class="hito__texto">La red creció a nueve ciudades y verificamos por primera vez nuestra huella con un tercero independiente.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="seccion fondo-beige" aria-labelledby="valores-titulo">
+      <div class="contenedor">
+        <header class="seccion__encabezado">
+          <p class="seccion__etiqueta"><span class="icono icono--estrella" aria-hidden="true"></span> Principios</p>
+          <h2 id="valores-titulo" class="seccion__titulo">Tres cosas que no negociamos</h2>
+        </header>
+
+        <div class="rejilla-tarjetas valores-rejilla">
+          <article class="valor">
+            <span class="icono icono--hoja icono--grande" aria-hidden="true"></span>
+            <h3 class="valor__titulo">Sostenibilidad real</h3>
+            <p class="valor__texto">Nada de declaraciones vagas: cada afirmación ambiental se puede rastrear hasta un comprobante o una medición.</p>
+          </article>
+          <article class="valor">
+            <span class="icono icono--reciclaje icono--grande" aria-hidden="true"></span>
+            <h3 class="valor__titulo">Economía circular</h3>
+            <p class="valor__texto">El empaque no termina en la basura. Se devuelve, se reusa o se composta en nuestra bodega.</p>
+          </article>
+          <article class="valor">
+            <span class="icono icono--corazon icono--grande" aria-hidden="true"></span>
+            <h3 class="valor__titulo">Comercio justo</h3>
+            <p class="valor__texto">Publicamos el precio de origen. Si el productor no gana, el modelo no funciona.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="cta-titulo">
+      <div class="contenedor">
+        <div class="cta">
+          <div>
+            <h2 id="cta-titulo" class="cta__titulo">¿Quieres saber algo más de nosotros?</h2>
+            <p class="cta__texto">Escríbenos y te contamos con qué productores trabajamos y cómo llega tu pedido a la puerta.</p>
+          </div>
+          <a href="contacto.html" class="boton boton--claro">
+            <span class="icono icono--correo" aria-hidden="true"></span>
+            Escribir a contacto
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <section class="pie__marca">
+          <a href="../index.html" class="logo"><span class="icono icono--hoja" aria-hidden="true"></span> EcoMarket</a>
+          <p class="pie__texto">Tienda en línea de productos ecológicos, reutilizables y sostenibles. Compra responsable, vida sostenible.</p>
+        </section>
+
+        <nav aria-labelledby="pie-nav">
+          <h3 id="pie-nav" class="pie__titulo">Navegación</h3>
+          <ul class="pie__lista">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="productos.html">Catálogo</a></li>
+            <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pie-cat">
+          <h3 id="pie-cat" class="pie__titulo">Categorías</h3>
+          <ul class="pie__lista">
+            <li><a href="productos.html">Hogar</a></li>
+            <li><a href="productos.html">Cuidado personal</a></li>
+            <li><a href="productos.html">Alimentos</a></li>
+            <li><a href="productos.html">Ofertas</a></li>
+          </ul>
+        </nav>
+
+        <section aria-labelledby="pie-con">
+          <h3 id="pie-con" class="pie__titulo">Contacto</h3>
+          <ul class="pie__contacto">
+            <li><span class="icono icono--ubicacion" aria-hidden="true"></span> Calle 42 #15-08, Bogotá</li>
+            <li><span class="icono icono--telefono" aria-hidden="true"></span> +57 601 456 7890</li>
+            <li><span class="icono icono--correo" aria-hidden="true"></span> hola@ecomarket.co</li>
+            <li><span class="icono icono--reloj" aria-hidden="true"></span> Lunes a sábado, 8:00 – 18:00</li>
+          </ul>
+        </section>
+      </div>
+
+      <p class="pie__legal">© 2026 EcoMarket · Proyecto Frontend I · Imágenes de Burst (Shopify), uso libre.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

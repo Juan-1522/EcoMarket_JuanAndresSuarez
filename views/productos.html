@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo EcoMarket: productos ecológicos para el hogar, cuidado personal y alimentos, con filtros y ordenamiento.">
+  <title>Catálogo de productos | EcoMarket</title>
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="control" aria-hidden="true">
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+      <a href="../index.html" class="logo" aria-label="EcoMarket, ir al inicio">
+        <span class="icono icono--hoja" aria-hidden="true"></span>
+        EcoMarket
+      </a>
+
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="../index.html" class="navegacion__enlace">Inicio</a>
+        <a href="productos.html" class="navegacion__enlace navegacion__enlace--activo">Productos</a>
+        <a href="sobre-nosotros.html" class="navegacion__enlace">Nosotros</a>
+        <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+      </nav>
+
+      <div class="cabecera__acciones">
+        <a href="productos.html" class="cabecera__accion" aria-label="Buscar productos">
+          <span class="icono icono--lupa" aria-hidden="true"></span>
+        </a>
+        <a href="contacto.html" class="cabecera__accion" aria-label="Mi cuenta">
+          <span class="icono icono--usuario" aria-hidden="true"></span>
+        </a>
+        <a href="productos.html" class="cabecera__accion" aria-label="Carrito de compras, 3 productos">
+          <span class="icono icono--carrito" aria-hidden="true"></span>
+          <span class="cabecera__contador">3</span>
+        </a>
+      </div>
+
+      <label for="menu-toggle" class="cabecera__menu-boton" aria-label="Abrir o cerrar el menú">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="cabecera-pagina">
+      <div class="contenedor">
+        <ol class="migas">
+          <li><a href="../index.html">Inicio</a></li>
+          <li aria-current="page">Catálogo</li>
+        </ol>
+        <h1 class="seccion__titulo">Catálogo de productos</h1>
+        <p class="seccion__descripcion">
+          Filtra por categoría y ordena la lista para encontrar tu reemplazo sostenible.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <input type="radio" name="filtro" id="f-todos" class="control" checked>
+        <input type="radio" name="filtro" id="f-hogar" class="control">
+        <input type="radio" name="filtro" id="f-cuidado" class="control">
+        <input type="radio" name="filtro" id="f-alimentos" class="control">
+        <input type="radio" name="pagina" id="p-1" class="control" checked>
+        <input type="radio" name="pagina" id="p-2" class="control">
+
+        <div class="rejilla-catalogo">
+
+          <aside class="filtros" aria-label="Filtros de categoría">
+            <h2 class="filtros__titulo">Categorías</h2>
+            <label for="f-todos" class="filtro">Todos</label>
+            <label for="f-hogar" class="filtro">Hogar</label>
+            <label for="f-cuidado" class="filtro">Cuidado personal</label>
+            <label for="f-alimentos" class="filtro">Alimentos</label>
+            <p class="filtros__pie">12 productos disponibles · envío en 24 h</p>
+          </aside>
+
+          <div class="catalogo__zona">
+            <div class="barra-catalogo">
+              <label class="buscador" for="buscar">
+                <span class="icono icono--lupa" aria-hidden="true"></span>
+                <input type="search" id="buscar" class="buscador__entrada" placeholder="Buscar en el catálogo…" autocomplete="off">
+                <span class="oculto-visualmente">Escribe para filtrar por nombre de producto</span>
+              </label>
+
+              <p class="barra-catalogo__resultado"><strong>12</strong> resultados</p>
+
+              <div class="ordenar">
+                <label for="orden">Ordenar por:</label>
+                <select id="orden" class="ordenar__seleccion">
+                  <option>Más relevantes</option>
+                  <option>Precio: menor a mayor</option>
+                  <option>Precio: mayor a menor</option>
+                  <option>Mejor valorados</option>
+                  <option>Novedades</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="rejilla-tarjetas">
+
+              <article class="tarjeta cat-hogar pag-1">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/vela-soja.jpg" alt="Vela de soja en frasco de vidrio sobre madera" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia tarjeta__insignia--arena">Frasco reutilizable</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar vela de soja en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Hogar</p>
+                  <h3 class="tarjeta__nombre">Vela de soja aromática</h3>
+                  <p class="tarjeta__resena">Cera vegetal, mecha de algodón y 35 horas de encendido limpio.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 4.7 · 53 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 21.000</p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-hogar pag-1">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/suculenta.jpg" alt="Suculenta en maceta negra sostenida en la mano" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia">Nuevo</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar suculenta en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Hogar</p>
+                  <h3 class="tarjeta__nombre">Suculenta en maceta reciclada</h3>
+                  <p class="tarjeta__resena">Planta viva en maceta de cerámica hecha con material recuperado.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 4.9 · 31 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 17.500</p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-cuidado pag-1">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/jabon-karite.jpg" alt="Jabón artesanal de karité sobre hojas verdes" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia">Nuevo</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar jabón de karité en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Cuidado personal</p>
+                  <h3 class="tarjeta__nombre">Jabón artesanal de karité</h3>
+                  <p class="tarjeta__resena">Barra de 120 g hecha en frío, sin sulfatos ni perfume sintético.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 5.0 · 42 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 12.000<span class="precio__anterior">$ 15.900</span></p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-cuidado pag-1">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/jabones-naturales.jpg" alt="Cuatro jabones naturales sobre soporte de madera" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia tarjeta__insignia--arena">Pack ahorro</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar set de jabones en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Cuidado personal</p>
+                  <h3 class="tarjeta__nombre">Set de 3 jabones naturales</h3>
+                  <p class="tarjeta__resena">Avena, arcilla y carbón activado. Envueltos en papel semilla.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 4.8 · 67 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 28.500<span class="precio__anterior">$ 36.000</span></p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-alimentos pag-1">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/palta-organica.jpg" alt="Palta orgánica cortada sobre pan y vegetales" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia">Orgánico</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar palta orgánica en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Alimentos</p>
+                  <h3 class="tarjeta__nombre">Palta orgánica Hass</h3>
+                  <p class="tarjeta__resena">Cultivada sin agroquímicos en el altiplano. Vendida a granel.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 4.8 · 76 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 8.500</p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-alimentos pag-1">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/cafe-grano.jpg" alt="Granos de café esparcidos sobre fondo claro" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia">Comercio justo</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar café en grano en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Alimentos</p>
+                  <h3 class="tarjeta__nombre">Café en grano de origen</h3>
+                  <p class="tarjeta__resena">Tueste medio de una vereda del Huila, en bolsa de papel compostable.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 5.0 · 210 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 24.000<span class="precio__anterior">$ 27.500</span></p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-hogar pag-2">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/planta-agave.jpg" alt="Planta de agave vista desde arriba" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia tarjeta__insignia--arena">Resistente a sequía</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar agave en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Hogar</p>
+                  <h3 class="tarjeta__nombre">Agave para exteriores</h3>
+                  <p class="tarjeta__resena">No necesita riego frecuente y limpia el aire de la terraza.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 4.6 · 24 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 32.000</p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-hogar pag-2">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/helecho-maceta.jpg" alt="Helecho verde en maceta de cerámica blanca" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia">Nuevo</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar helecho en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Hogar</p>
+                  <h3 class="tarjeta__nombre">Helecho en maceta de cerámica</h3>
+                  <p class="tarjeta__resena">Maceta torneada a mano por un taller local de Ráquira.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 4.9 · 18 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 26.400</p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-cuidado pag-2">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/cepillos-bambu.jpg" alt="Cepillos de dientes de bambú sobre fondo oscuro" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia">Reutilizable</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar cepillos de bambú en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Cuidado personal</p>
+                  <h3 class="tarjeta__nombre">Pack 4 cepillos de bambú</h3>
+                  <p class="tarjeta__resena">Mango compostable y cerdas de carbón activado, sin plástico.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 4.9 · 128 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 18.900</p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-cuidado pag-2">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/cepillos-infantiles.jpg" alt="Cepillos de bambú infantiles con cerdas de colores" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia tarjeta__insignia--arena">Infantil</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar cepillos infantiles en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Cuidado personal</p>
+                  <h3 class="tarjeta__nombre">Cepillos de bambú infantiles</h3>
+                  <p class="tarjeta__resena">Cerdas suaves y mango corto para manos pequeñas. Pack de 6.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 4.7 · 45 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 16.200</p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-alimentos pag-2">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/tomate-heirloom.jpg" alt="Tomate rojo sobre fondo blanco" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia">Orgánico</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar tomate heirloom en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Alimentos</p>
+                  <h3 class="tarjeta__nombre">Tomate heirloom (1 kg)</h3>
+                  <p class="tarjeta__resena">Semilla criolla, madurado en planta y recogido el mismo día.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 4.8 · 59 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 15.300</p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tarjeta cat-alimentos pag-2">
+                <div class="tarjeta__figura">
+                  <img src="../img/products/lenteja-roja.jpg" alt="Lenteja roja a granel ocupando todo el cuadro" class="tarjeta__imagen">
+                  <span class="tarjeta__insignia tarjeta__insignia--arena">A granel</span>
+                  <button class="tarjeta__favorito" aria-label="Guardar lenteja roja en favoritos"><span class="icono icono--corazon" aria-hidden="true"></span></button>
+                </div>
+                <div class="tarjeta__cuerpo">
+                  <p class="tarjeta__categoria">Alimentos</p>
+                  <h3 class="tarjeta__nombre">Lenteja roja de granja (500 g)</h3>
+                  <p class="tarjeta__resena">Traes tu frasco al punto de acopio y lo devolvemos lleno.</p>
+                  <p class="valoracion"><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span><span class="icono icono--estrella"></span> 4.6 · 37 reseñas</p>
+                  <div class="tarjeta__pie">
+                    <p class="precio">$ 9.900</p>
+                    <button class="boton-agregar"><span class="icono icono--carrito" aria-hidden="true"></span> Agregar</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <nav class="paginacion" aria-label="Paginación del catálogo">
+              <label for="p-1" class="paginacion__nav">Anterior</label>
+              <label for="p-1" class="paginacion__etiqueta">1</label>
+              <label for="p-2" class="paginacion__etiqueta">2</label>
+              <span class="paginacion__fijo">3</span>
+              <label for="p-2" class="paginacion__nav">Siguiente</label>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <section class="pie__marca">
+          <a href="../index.html" class="logo"><span class="icono icono--hoja" aria-hidden="true"></span> EcoMarket</a>
+          <p class="pie__texto">Tienda en línea de productos ecológicos, reutilizables y sostenibles. Compra responsable, vida sostenible.</p>
+        </section>
+
+        <nav aria-labelledby="pie-nav">
+          <h3 id="pie-nav" class="pie__titulo">Navegación</h3>
+          <ul class="pie__lista">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="productos.html">Catálogo</a></li>
+            <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pie-cat">
+          <h3 id="pie-cat" class="pie__titulo">Categorías</h3>
+          <ul class="pie__lista">
+            <li><label for="f-hogar" class="pie__enlace">Hogar</label></li>
+            <li><label for="f-cuidado" class="pie__enlace">Cuidado personal</label></li>
+            <li><label for="f-alimentos" class="pie__enlace">Alimentos</label></li>
+            <li><label for="f-todos" class="pie__enlace">Ver todos</label></li>
+          </ul>
+        </nav>
+
+        <section aria-labelledby="pie-con">
+          <h3 id="pie-con" class="pie__titulo">Contacto</h3>
+          <ul class="pie__contacto">
+            <li><span class="icono icono--ubicacion" aria-hidden="true"></span> Calle 42 #15-08, Bogotá</li>
+            <li><span class="icono icono--telefono" aria-hidden="true"></span> +57 601 456 7890</li>
+            <li><span class="icono icono--correo" aria-hidden="true"></span> hola@ecomarket.co</li>
+            <li><span class="icono icono--reloj" aria-hidden="true"></span> Lunes a sábado, 8:00 – 18:00</li>
+          </ul>
+        </section>
+      </div>
+
+      <p class="pie__legal">© 2026 EcoMarket · Proyecto Frontend I · Imágenes de Burst (Shopify), uso libre.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

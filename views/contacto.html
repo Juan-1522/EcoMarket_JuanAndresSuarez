@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta a EcoMarket: formulario de contacto, dirección de la tienda, teléfono, correo y horarios de atención.">
+  <title>Contacto | EcoMarket</title>
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="control" aria-hidden="true">
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+      <a href="../index.html" class="logo" aria-label="EcoMarket, ir al inicio">
+        <span class="icono icono--hoja" aria-hidden="true"></span>
+        EcoMarket
+      </a>
+
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="../index.html" class="navegacion__enlace">Inicio</a>
+        <a href="productos.html" class="navegacion__enlace">Productos</a>
+        <a href="sobre-nosotros.html" class="navegacion__enlace">Nosotros</a>
+        <a href="contacto.html" class="navegacion__enlace navegacion__enlace--activo">Contacto</a>
+      </nav>
+
+      <div class="cabecera__acciones">
+        <a href="productos.html" class="cabecera__accion" aria-label="Buscar productos">
+          <span class="icono icono--lupa" aria-hidden="true"></span>
+        </a>
+        <a href="contacto.html" class="cabecera__accion" aria-label="Mi cuenta">
+          <span class="icono icono--usuario" aria-hidden="true"></span>
+        </a>
+        <a href="productos.html" class="cabecera__accion" aria-label="Carrito de compras, 3 productos">
+          <span class="icono icono--carrito" aria-hidden="true"></span>
+          <span class="cabecera__contador">3</span>
+        </a>
+      </div>
+
+      <label for="menu-toggle" class="cabecera__menu-boton" aria-label="Abrir o cerrar el menú">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="cabecera-pagina">
+      <div class="contenedor">
+        <ol class="migas">
+          <li><a href="../index.html">Inicio</a></li>
+          <li aria-current="page">Contacto</li>
+        </ol>
+        <h1 class="seccion__titulo">Contacto</h1>
+        <p class="seccion__descripcion">
+          Escríbenos y te respondemos el mismo día hábil. También puedes pasar por la tienda.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor rejilla-formulario">
+
+        <div>
+          <header class="seccion__encabezado">
+            <p class="seccion__etiqueta"><span class="icono icono--correo" aria-hidden="true"></span> Cuéntanos</p>
+            <h2 class="seccion__titulo">Envíanos un mensaje</h2>
+            <p class="seccion__descripcion">
+              Los campos marcados con <strong>*</strong> son obligatorios. La validación se hace
+              mientras escribes, sin JavaScript.
+            </p>
+          </header>
+
+          <form class="formulario" action="#enviado" method="post">
+            <div class="campo">
+              <label class="campo__etiqueta" for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
+              <input class="campo__entrada" type="text" id="nombre" name="nombre"
+                     placeholder="Ana María Gómez" minlength="3" maxlength="60"
+                     pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,}" required autocomplete="name">
+              <p class="campo__error">Escribe al menos 3 letras, sin números ni símbolos.</p>
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="correo">Correo electrónico <span aria-hidden="true">*</span></label>
+              <input class="campo__entrada" type="email" id="correo" name="correo"
+                     placeholder="tucorreo@ejemplo.com" required autocomplete="email">
+              <p class="campo__error">Revisa el formato: necesita un @ y un dominio.</p>
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="telefono">Teléfono (opcional)</label>
+              <input class="campo__entrada" type="tel" id="telefono" name="telefono"
+                     placeholder="300 123 4567" pattern="[0-9 ]{7,15}" autocomplete="tel">
+              <p class="campo__error">Solo números, entre 7 y 15 dígitos.</p>
+              <p class="campo__ayuda">Si prefieres que te llamemos, déjanos tu número.</p>
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="asunto">Asunto <span aria-hidden="true">*</span></label>
+              <select class="campo__entrada" id="asunto" name="asunto" required>
+                <option value="" selected disabled>Elige una opción…</option>
+                <option>Consulta sobre un producto</option>
+                <option>Estado de mi pedido</option>
+                <option>Devolución o cambio</option>
+                <option>Quiero ser productor EcoMarket</option>
+                <option>Otro</option>
+              </select>
+              <p class="campo__error">Selecciona un asunto para dirigir tu mensaje.</p>
+            </div>
+
+            <div class="campo">
+              <label class="campo__etiqueta" for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+              <textarea class="campo__entrada" id="mensaje" name="mensaje"
+                        placeholder="Escribe aquí tu pregunta o comentario…"
+                        minlength="15" maxlength="600" required></textarea>
+              <p class="campo__error">Cuéntanos un poco más: mínimo 15 caracteres.</p>
+            </div>
+
+            <div class="campo campo--verificacion">
+              <label class="caja" for="acepto">
+                <input type="checkbox" id="acepto" name="acepto" required>
+                <span class="caja__marco" aria-hidden="true"></span>
+                Acepto la política de tratamiento de datos de EcoMarket. <span aria-hidden="true">*</span>
+              </label>
+              <p class="campo__error">Debes aceptar la política para poder enviar.</p>
+            </div>
+
+            <button type="submit" class="boton boton--primario boton--entero boton--enviar">
+              <span class="icono icono--correo" aria-hidden="true"></span>
+              Enviar mensaje
+            </button>
+          </form>
+
+          <div class="aviso" id="enviado" role="status">
+            <span class="icono icono--hoja icono--grande" aria-hidden="true"></span>
+            <div>
+              <h3 class="aviso__titulo">¡Mensaje enviado!</h3>
+              <p class="aviso__texto">Gracias por escribirnos. Te respondemos en menos de 24 horas hábiles desde hola@ecomarket.co.</p>
+              <a href="#nombre" class="ver-todo">Escribir otro mensaje</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="datos" aria-label="Datos de contacto">
+          <article class="dato">
+            <span class="icono icono--ubicacion" aria-hidden="true"></span>
+            <h3 class="dato__titulo">Dirección</h3>
+            <p class="dato__texto">Calle 42 #15-08, barrio La Soledad<br>Bogotá D.C., Colombia</p>
+          </article>
+
+          <article class="dato">
+            <span class="icono icono--telefono" aria-hidden="true"></span>
+            <h3 class="dato__titulo">Teléfono</h3>
+            <p class="dato__texto"><a href="tel:+576014567890">+57 601 456 7890</a><br><a href="tel:+573001234567">+57 300 123 4567</a></p>
+          </article>
+
+          <article class="dato">
+            <span class="icono icono--correo" aria-hidden="true"></span>
+            <h3 class="dato__titulo">Correo</h3>
+            <p class="dato__texto"><a href="mailto:hola@ecomarket.co">hola@ecomarket.co</a><br><a href="mailto:productores@ecomarket.co">productores@ecomarket.co</a></p>
+          </article>
+
+          <article class="dato">
+            <span class="icono icono--reloj" aria-hidden="true"></span>
+            <h3 class="dato__titulo">Horarios</h3>
+            <p class="dato__texto">Lunes a sábado: 8:00 – 18:00<br>Domingos y festivos: cerrado</p>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seccion fondo-beige" aria-labelledby="mapa-titulo">
+      <div class="contenedor">
+        <header class="seccion__encabezado">
+          <p class="seccion__etiqueta"><span class="icono icono--ubicacion" aria-hidden="true"></span> Dónde estamos</p>
+          <h2 id="mapa-titulo" class="seccion__titulo">Punto de acopio y tienda física</h2>
+          <p class="seccion__descripcion">
+            Aquí puedes devolver las cajas y frascos para reutilizarlos. Queda a dos cuadras
+            de la estación de la Calle 42.
+          </p>
+        </header>
+
+        <div class="mapa" role="img" aria-label="Mapa esquemático con la ubicación de la tienda EcoMarket en la Calle 42 con Carrera 15">
+          <span class="mapa__calle mapa__calle--horizontal"></span>
+          <span class="mapa__calle mapa__calle--vertical"></span>
+          <span class="mapa__etiqueta">EcoMarket · Cl. 42 #15-08</span>
+          <span class="mapa__marcador"><span class="icono icono--ubicacion" aria-hidden="true"></span></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <section class="pie__marca">
+          <a href="../index.html" class="logo"><span class="icono icono--hoja" aria-hidden="true"></span> EcoMarket</a>
+          <p class="pie__texto">Tienda en línea de productos ecológicos, reutilizables y sostenibles. Compra responsable, vida sostenible.</p>
+        </section>
+
+        <nav aria-labelledby="pie-nav">
+          <h3 id="pie-nav" class="pie__titulo">Navegación</h3>
+          <ul class="pie__lista">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="productos.html">Catálogo</a></li>
+            <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="pie-cat">
+          <h3 id="pie-cat" class="pie__titulo">Categorías</h3>
+          <ul class="pie__lista">
+            <li><a href="productos.html">Hogar</a></li>
+            <li><a href="productos.html">Cuidado personal</a></li>
+            <li><a href="productos.html">Alimentos</a></li>
+            <li><a href="productos.html">Ofertas</a></li>
+          </ul>
+        </nav>
+
+        <section aria-labelledby="pie-con">
+          <h3 id="pie-con" class="pie__titulo">Contacto</h3>
+          <ul class="pie__contacto">
+            <li><span class="icono icono--ubicacion" aria-hidden="true"></span> Calle 42 #15-08, Bogotá</li>
+            <li><span class="icono icono--telefono" aria-hidden="true"></span> +57 601 456 7890</li>
+            <li><span class="icono icono--correo" aria-hidden="true"></span> hola@ecomarket.co</li>
+            <li><span class="icono icono--reloj" aria-hidden="true"></span> Lunes a sábado, 8:00 – 18:00</li>
+          </ul>
+        </section>
+      </div>
+
+      <p class="pie__legal">© 2026 EcoMarket · Proyecto Frontend I · Imágenes de Burst (Shopify), uso libre.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
